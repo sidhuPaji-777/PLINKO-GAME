@@ -1,3 +1,4 @@
+
 const Engine = Matter.Engine;
 const World = Matter.World;
 const Bodies = Matter.Bodies;
@@ -45,6 +46,7 @@ function setup() {
 
     arryPlinko.push(plinko = new Plinko(i+5, 340));
   }
+
   
 
   
@@ -60,7 +62,7 @@ function draw() {
   background(0);  
   textSize(20);
   fill("YELLOW");
-  text("Press Space for Spwaning the Particles", 50, 30);
+  text("Press Space for Spawning the Particles", 50, 30);
   // text("X"+mouseX+"  Y"+ mouseY , 50, 50);
   // if(keyCode===32)
 
@@ -83,32 +85,12 @@ function draw() {
   {
     arryPlinko[i].display();
   }
-  
-  
-  //   particles.x = mouseX;
-  //  particles.y = mouseY;
+
    
    
    
   ground.display();
   
-  // particles.display();
-  
-  // spwanParticles();
-  //  Creating Particles
-  
-  // Matter.Body.setPosition(particles.body, {x: mouseX , y: mouseY});
-  
   drawSprites();
 }
 
-// function spwanParticles()
-// {
-  
-//   // if(keyCode===32)
-//   // {
-    
-//   // }
-//   // console.log(rand);
-
-// }
