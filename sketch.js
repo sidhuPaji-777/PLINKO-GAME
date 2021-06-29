@@ -63,15 +63,21 @@ function draw() {
   textSize(20);
   fill("YELLOW");
   text("Press Space for Spawning the Particles", 50, 30);
-  // text("X"+mouseX+"  Y"+ mouseY , 50, 50);
-  // if(keyCode===32)
 
-  if(keyWentDown("SPACE"))
+  // if(keyWentDown("SPACE"))
+  // {
+  //   // how to put asycronas
+  //   arryPlinko.push(particles=new Particles(rand, 50, 10, 10));
+  //   particles.display();
+  // }
+
+  if(frameCount%60===0)
   {
-    // how to put asycronas
+    // particles.push(new Particle(random(width/2-30, width/2+30), 10,10)
     arryPlinko.push(particles=new Particles(rand, 50, 10, 10));
-    particles.display();
   }
+  // particles.display();
+  
   rand = Math.round(random([60, 115, 171, 220, 270, 320, 420]));
   
   
@@ -85,6 +91,12 @@ function draw() {
   {
     arryPlinko[i].display();
   }
+
+   // Displaying plinkos
+   for (var i = 0; i < arryPlinko.length; i++) 
+   {
+    arryPlinko[i].display();
+   }
 
    
    
